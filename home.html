@@ -1,12 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/home.css">
+	<script language="JavaScript">
+	function showInput() {
+		document.getElementById('display').innerHTML = document.getElementById("user_input").value;
+	}
+	</script>
 </head>
-<body>
-    
+
+<body onload="loaded();">
+	<script>
+	</script>
+	<div class="containerHome"> <img class="logo2" src="img/budgie.png" alt="">
+		<h1 class="hello ">Hello! Welcome to</h1>
+		<h1 class="budgie2">Budgie</h1> </div>
+	<h1 class="dash">Dashboard:</h1>
+	<div class="square"></div>
+	<!-- <ul id="name-user"></ul> -->
+	<div class="dashBoard">
+		<p id="demo"></p>
+		<div id="panels" class="panel">
+			<h1 class="labels">Balance:
+                <p class="display">
+                    £<span id='display'>Insert Balance</span>
+                </p>
+            </h1>
+			<div class="balanceForm">
+				<input type="number" min="1" step="any" name="message" id="user_input"> </form>
+				<input class="balanceBtn" type="submit" onclick="showInput();">
+				<br/> </div>
+			<form>
+		</div>
+		<div id="panels" class="panel1">
+			<iframe src="https://calendar.google.com/calendar/embed?height=300&wkst=1&bgcolor=%23039BE5&ctz=Europe%2FLondon&showTitle=0&mode=MONTH&showTz=0&showCalendars=0&showTabs=0&showPrint=0&showDate=0&showNav=0&src=cnM3ZDRrbmNob21wbmF0N29wOHBiMWs4aG9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23F09300" style="border-width:0" width="300" height="300" frameborder="0" scrolling="no"></iframe>
+		</div>
+		<div id="panels" class="panel2">
+			<div class="container-fluid center-meh-boi">
+				<div class="row">
+					<div class="col-sm-6 col-sm-offset-1">
+						<div class="box-of-stuff">
+							<form>
+								<input class="form-control input-lg" type="text" id="income" placeholder="Monthly Income" />
+								<input class="form-control input-lg" type="text" id="rent" placeholder="Rent" />
+								<input class="form-control input-lg" type="text" id="food" placeholder="Food" />
+								<input class="form-control input-lg" type="text" id="utilities" placeholder="Utilities" />
+								<input class="form-control input-lg" type="text" id="insurance" placeholder="Insurance" /> </form>
+							<button class="btn btn-primary btn-lg btn-block">Submit</button>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="results">
+							<h1 class="title">Results</h1>
+							<div class="results-data">
+								<p>£</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div> </div>
+			<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase.js"></script>
+			<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+			<script src="js/firebase.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+			<script src="/js/home.js"></script>
 </body>
+
 </html>
